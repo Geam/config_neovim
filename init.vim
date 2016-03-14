@@ -94,6 +94,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'fatih/vim-go'
+Plug 'Numkil/ag.nvim'
 
 " fast editing
 Plug 'tpope/vim-surround'
@@ -279,6 +280,10 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+" }}}
+
+" ag.nvim {{{
+let g:ag_working_path_mode="r"
 " }}}
 
 " filetype {{{
