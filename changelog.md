@@ -1,6 +1,9 @@
 # Changelog
 
-- 23/11/2013 :
+- 14/04/2016 :
+    - replace neoccmplcache with deoplete
+    - add clang_complete for completion
+- 23/11/2015 :
     - add word search shortcut (<Leader>s)
     - add changelog file
 - 13/11/2015 :
