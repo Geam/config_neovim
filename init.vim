@@ -105,7 +105,7 @@ call plug#end()
 
 " set leader
 let mapleader="\<SPACE>"
-nnoremap <Leader>r :set relativenumber!<CR>
+nnoremap <silent> <Leader>r :set relativenumber!<CR>
 
 colorscheme molokai "colorscheme
 
