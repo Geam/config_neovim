@@ -101,6 +101,7 @@ You need to have python3 support, to test if you have it run the following comma
 If the return is 0, you need to install it :
 * system wide`pip3 install neovim`
 * just for user `pip3 install --user neovim`
+
 Then you need to enable the deoplete plugin `:UpdateRemotePlugins`
 #### 5.2 - clang_complete
 [Rip-Rip clang_complete plugin](https://github.com/Rip-Rip/clang_complete)
@@ -109,6 +110,7 @@ You need to have python2 support, to test if you have it, run the following comm
 If the return is 0, you need to install it :
 * system wide`pip2 install neovim`
 * just for user `pip2 install --user neovim`
+
 You need to have clang install on your system.
 ## IV - Licence
 The files in this repository comes under beer-ware licence.
