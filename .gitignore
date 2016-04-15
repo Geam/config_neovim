@@ -1,4 +1,5 @@
 shada/*
 plugged/*
+tmp/*
 autoload/plug.vim
 autoload/plug.vim.old

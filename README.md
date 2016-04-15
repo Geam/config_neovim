@@ -1,5 +1,7 @@
 # My neovim config
 ## I - Changelog
+- 14/04/2016 :
+    - replace completion plugin (from neocomplete to deoplete)
 - 14/03/2016 :
     - add ag.nvim plugin
 - 03/02/2016 :
@@ -42,7 +44,7 @@ brew install --HEAD neovim
 ```bash
 cd
 if [[ ! -d "$HOME/.config" ]]; then
-	mkdir $HOME/.config
+    mkdir $HOME/.config
 fi
 git clone git@github.com:geam/config_neovim.git $HOME/.config/nvim
 ```
@@ -91,11 +93,25 @@ In the font book, create a new lib (right clic, new lib) and add add the font to
 Édit your config and choose the non-ascii font : you can choose any font that contain "powerline" in it's name and that's it.
 #### 4.2 - other term
 Same as above but I don't know the way to do it. If you've got an issue, report to this : https://powerline.readthedocs.org/en/latest/installation.html#fonts-installation
-### IV - Licence
-#### autoload/plug.vim
-autoload/plug.vim is an asynchronous plugin manager (https://github.com/junegunn/vim-plug), it comes under the MIT licence
-#### The rest
-The files nvimrc and README.md are under the beer-ware licence.
+### 5 - plugins requierements
+#### 5.1 - deoplete
+[Shougo deoplete plugin](https://github.com/Shougo/deoplete.nvim)
+You need to have python3 support, to test if you have it run the following command in neovim.
+`:echo has('python3')`
+If the return is 0, you need to install it :
+* system wide`pip3 install neovim`
+* just for user `pip3 install --user neovim`
+Then you need to enable the deoplete plugin `:UpdateRemotePlugins`
+#### 5.2 - clang_complete
+[Rip-Rip clang_complete plugin](https://github.com/Rip-Rip/clang_complete)
+You need to have python2 support, to test if you have it, run the following command in neovim.
+`:echo has('python')`
+If the return is 0, you need to install it :
+* system wide`pip2 install neovim`
+* just for user `pip2 install --user neovim`
+You need to have clang install on your system.
+## IV - Licence
+The files in this repository comes under beer-ware licence.
 ```
 ----------------------------------------------------------------------------
 "THE BEER-WARE LICENSE" (Revision 42):

@@ -142,6 +142,7 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 
 " deoplete {{{
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#auto_complete_start_length = 1
 
 let g:clang_complete_auto = 0
 let g:clang_auto_select = 0
@@ -149,13 +150,9 @@ let g:clang_omnicppcomplete_compliance = 0
 let g:clang_make_default_keymappings = 0
 let g:clang_use_library = 1
 
-let g:deoplete#omni#input_patterns = {}
-let g:deoplete#omni#input_patterns._ = ['buffer']
-let g:deoplete#omni#input_patterns.c = ['buffer', 'file', 'omni']
-
-let g:deoplete#omni_input_patterns = {}
-let g:deoplete#omni_input_patterns.c = '[^.[:digit:] *\t]\%(\.\|->\)\w*'
-let g:deoplete#omni_input_patterns.cpp = '[^.[:digit:] *\t]\%(\.\|->\)\w*\|\h\w*::\w*'
+let g:deoplete#omni#sources = {}
+let g:deoplete#omni#sources._ = ['buffer']
+let g:deoplete#omni#sources.c = ['buffer', 'file', 'omni']
 " }}}
 
 " snippets {{{
