@@ -150,9 +150,6 @@ let g:clang_omnicppcomplete_compliance = 0
 let g:clang_make_default_keymappings = 0
 let g:clang_use_library = 1
 
-let g:deoplete#omni#sources = {}
-let g:deoplete#omni#sources._ = ['buffer']
-let g:deoplete#omni#sources.c = ['buffer', 'file', 'omni']
 " }}}
 
 " snippets {{{
