@@ -81,6 +81,10 @@ call plug#begin('~/.config/nvim/plugged')
 " color scheme
 Plug 'tomasr/molokai'
 
+" syntax hilight improvement
+Plug 'octol/vim-cpp-enhanced-highlight'
+Plug 'jelera/vim-javascript-syntax'
+
 " completion
 Plug 'Shougo/deoplete.nvim'
 Plug 'Rip-Rip/clang_complete'
@@ -92,9 +96,9 @@ Plug 'benekastah/neomake'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-fugitive'
-Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'fatih/vim-go'
 Plug 'Numkil/ag.nvim'
+Plug 'pangloss/vim-javascript'
 
 " fast editing
 Plug 'tpope/vim-surround'
