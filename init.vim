@@ -84,6 +84,7 @@ Plug 'tomasr/molokai'
 " syntax hilight improvement
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jelera/vim-javascript-syntax'
+Plug 'digitaltoad/vim-pug'
 
 " completion
 Plug 'Shougo/deoplete.nvim'
