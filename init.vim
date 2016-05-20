@@ -85,6 +85,8 @@ Plug 'tomasr/molokai'
 Plug 'octol/vim-cpp-enhanced-highlight'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'digitaltoad/vim-pug'
+Plug 'rust-lang/rust.vim'
+Plug 'cespare/vim-toml'
 
 " completion
 Plug 'Shougo/deoplete.nvim'
@@ -93,9 +95,9 @@ Plug 'geam/neosnippet-snippets' | Plug 'Shougo/neosnippet.vim'
 
 " ide like
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'benekastah/neomake'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'neomake/neomake'
 Plug 'tpope/vim-fugitive'
 Plug 'fatih/vim-go'
 Plug 'Numkil/ag.nvim'
@@ -145,6 +147,13 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 "}}}
 
+" rust {{{
+"let g:rustfmt_autosave = 1
+"set hidden
+let g:racer_cmd = "/usr/local/bin/racer"
+let $RUST_SRC_PATH = "/home/updater/git/rust/src/"
+" }}}
+
 " deoplete {{{
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_start_length = 1
@@ -154,6 +163,9 @@ let g:clang_auto_select = 0
 let g:clang_omnicppcomplete_compliance = 0
 let g:clang_make_default_keymappings = 0
 let g:clang_use_library = 1
+
+let g:deoplete#omni_patterns = {}
+let g:deoplete#omni_patterns.rust = '[(\.)(::)]'
 
 " }}}
 
