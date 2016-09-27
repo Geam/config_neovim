@@ -192,6 +192,11 @@ endif
 " neomake {{{1
 autocmd! BufWritePost,BufEnter * Neomake " activate syntax checker on save
 
+" cpp {{{2
+let g:neomake_cpp_enable_markers=['gcc']
+let g:neomake_cpp_clang_args = ["-std=c++11", "-Wextra", "-Wall", '-Werror', "-fsanitize=undefined", "-g", "-lcstd++"]
+" }}}2
+
 " go maker {{{2
 let g:neomake_go_gobuild_maker = {
     \ 'exe': 'sh',
@@ -238,7 +243,7 @@ augroup vimrcEx " {
     " FileType {{{
     " http://tedlogan.com/techblog3.html
     autocmd FileType sh setlocal ts=4 sts=4 sw=4 et ai " sh
-    autocmd FileType c setlocal ts=4 sts=4 sw=4 noet ai " c
+    autocmd FileType c setlocal ts=4 sts=4 sw=4 et ai " c
     autocmd FileType cpp setlocal ts=4 sts=4 sw=4 et ai " cpp
     autocmd FileType make setlocal ts=4 sts=4 sw=4 noet ai " Makefile
     autocmd FileType vim setlocal ts=4 sts=4 sw=4 et ai " Vim
@@ -246,7 +251,7 @@ augroup vimrcEx " {
     autocmd FileType markdown setlocal ts=4 sts=4 sw=4 et ai " Markdown
     autocmd FileType html setlocal ts=2 sts=2 sw=2 et ai " (x)HTML
     autocmd FileType php,java setlocal ts=2 sts=2 sw=2 et ai nocindent " PHP & Java
-    autocmd FileType javascript setlocal ts=2 sts=2 sw=2 et ai nocindent " JavaScript
+    autocmd FileType javascript setlocal ts=4 sts=4 sw=4 et ai nocindent " JavaScript
     autocmd FileType python setlocal ts=4 sts=4 sw=4 et ai " Python
     autocmd FileType ocaml setlocal ts=2 sts=2 sw=2 et ai " Ocaml
     autocmd FileType lisp setlocal ts=2 sts=2 sw=2 et ai " Lisp
